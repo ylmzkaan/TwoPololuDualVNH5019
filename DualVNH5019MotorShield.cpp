@@ -156,10 +156,10 @@ void DualVNH5019MotorShield::init()
   }
   else if(_PWM1 == 2 || _PWM1 == 3 || _PWM1 == 5 || 
           _PWM2 == 2 || _PWM2 == 3 || _PWM2 == 5 || _PWM2 == 6 || 
-		  _PWM3 == 7 || _PWM3 == 8 || 
+	  _PWM3 == 7 || _PWM3 == 8 || 
           _PWM4 == 7 || _PWM4 == 8)
   {
-    //timer3
+	//timer3
     TCCR3A = 0;
     if(_PWM1 == 5)      { TCCR3A |= _BV(COM3A1); _PWM1_REG = &OCR3A; }
     else if(_PWM1 == 2) { TCCR3A |= _BV(COM3B1); _PWM1_REG = &OCR3B; }
@@ -168,12 +168,12 @@ void DualVNH5019MotorShield::init()
     if(_PWM2 == 5)      { TCCR3A |= _BV(COM3A1); _PWM2_REG = &OCR3A; }
     else if(_PWM2 == 2) { TCCR3A |= _BV(COM3B1); _PWM2_REG = &OCR3B; }
     else if(_PWM2 == 3) { TCCR3A |= _BV(COM3C1); _PWM2_REG = &OCR3C; }
-	else if(_PWM2 == 6) { TCCR3A |= _BV(COM4A1); _PWM2_REG = &OCR4A; }
+    else if(_PWM2 == 6) { TCCR3A |= _BV(COM4A1); _PWM2_REG = &OCR4A; }
     
     TCCR3B = _BV(WGM33) | _BV(CS30);
     ICR3 = 400;
 
-	//timer4
+    //timer4
     TCCR4A = 0;
     if(_PWM3 == 7) { TCCR4A |= _BV(COM4B1); _PWM3_REG = &OCR4B; }
     else if(_PWM3 == 8) { TCCR4A |= _BV(COM4C1); _PWM3_REG = &OCR4C; }
