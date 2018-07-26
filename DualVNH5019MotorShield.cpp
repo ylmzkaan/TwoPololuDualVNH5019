@@ -21,10 +21,10 @@ DualVNH5019MotorShield::DualVNH5019MotorShield(unsigned char INA1, unsigned char
                                                unsigned char EN1DIAG1, unsigned char CS1, 
                                                unsigned char INA2, unsigned char INB2, 
                                                unsigned char EN2DIAG2, unsigned char CS2,
-											   unsigned char INA3, unsigned char INB3, 
-											   unsigned char EN3DIAG3, unsigned char CS3,
-											   unsigned char INA4, unsigned char INB4, 
-											   unsigned char EN4DIAG4, unsigned char CS4); //User-defined pin selection.
+						unsigned char INA3, unsigned char INB3, 
+						unsigned char EN3DIAG3, unsigned char CS3,
+						unsigned char INA4, unsigned char INB4, 
+						unsigned char EN4DIAG4, unsigned char CS4); //User-defined pin selection.
 {
   //Pin map
   _INA1 = INA1;
@@ -53,7 +53,8 @@ DualVNH5019MotorShield::DualVNH5019MotorShield(unsigned char INA1, unsigned char
                                                unsigned char EN1DIAG1, unsigned char CS1, 
                                                unsigned char PWM1, unsigned char INA2,
                                                unsigned char INB2, unsigned char EN2DIAG2, 
-                                               unsigned char CS2, unsigned char PWM2,unsigned char INA3, unsigned char INB3, 
+                                               unsigned char CS2, unsigned char PWM2,
+					       unsigned char INA3, unsigned char INB3, 
                                                unsigned char EN3DIAG3, unsigned char CS3, 
                                                unsigned char PWM3, unsigned char INA4,
                                                unsigned char INB4, unsigned char EN4DIAG4, 
